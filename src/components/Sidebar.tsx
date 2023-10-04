@@ -1,10 +1,7 @@
-import React from "react";
-
 const Sidebar = () => {
   const mainMenus = [
-    { text: "Home", icon: "fas fa-home" },
-    { text: "Trending", icon: "fas fa-chart-line" },
-    { text: "Subscriptions", icon: "fas fa-bookmark" },
+    { text: "Página Inicial", icon: "fas fa-home" },
+    { text: "Popular", icon: "fas fa-chart-line" },
   ];
   const libraryMenus = [
     { text: "History", icon: "fas fa-history" },
@@ -13,74 +10,41 @@ const Sidebar = () => {
     { text: "Show more", icon: "fas fa-arrows-alt" },
   ];
   const bestMenus = [
-    { text: "Music", icon: "fas fa-music" },
-    { text: "Sport", icon: "fas fa-basketball-ball" },
-    { text: "Gaming", icon: "fas fa-gamepad" },
-    { text: "Films", icon: "fas fa-film" },
-    { text: "TV shows", icon: "fas fa-tv" },
-    { text: "News", icon: "fas fa-newspaper" },
-    { text: "Live", icon: "fas fa-broadcast-tower" },
+    { text: "Jogos", icon: "fas fa-music" },
+    { text: "Esportes", icon: "fas fa-basketball-ball" },
+    { text: "Negócios", icon: "fas fa-gamepad" },
+    { text: "Cripto", icon: "fas fa-film" },
+    { text: "Televisão", icon: "fas fa-tv" },
+    { text: "Celebridades", icon: "fas fa-newspaper" },
   ];
-
   return (
-    <div className="flex justify-between">
-      <aside className="sidebar ">
-        <ul className="menu-group">
-          {mainMenus.map((menu, index) => (
-            <li className="menu-item" key={index}>
-              <i className={menu.icon}></i>
-              <span className="text">{menu.text}</span>
-            </li>
-          ))}
-        </ul>
-        <h4 className="menu-group-label">Library</h4>
-        <ul className="menu-group">
-          {libraryMenus.map((menu, index) => (
-            <li className="menu-item" key={index}>
-              <i className={menu.icon}></i>
-              <span className="text">{menu.text}</span>
-            </li>
-          ))}
-        </ul>
-        <h4 className="menu-group-label">Best of Youtube</h4>
-        <ul className="menu-group">
-          {bestMenus.map((menu, index) => (
-            <li className="menu-item" key={index}>
-              <i className={menu.icon}></i>
-              <span className="text">{menu.text}</span>
-            </li>
-          ))}
-        </ul>
-      </aside>
-      <main></main>
-      <aside className="sidebar">
-        <ul className="menu-group">
-          {mainMenus.map((menu, index) => (
-            <li className="menu-item" key={index}>
-              <i className={menu.icon}></i>
-              <span className="text">{menu.text}</span>
-            </li>
-          ))}
-        </ul>
-        <h4 className="menu-group-label">Library</h4>
-        <ul className="menu-group">
-          {libraryMenus.map((menu, index) => (
-            <li className="menu-item" key={index}>
-              <i className={menu.icon}></i>
-              <span className="text">{menu.text}</span>
-            </li>
-          ))}
-        </ul>
-        <h4 className="menu-group-label">Best of Youtube</h4>
-        <ul className="menu-group">
-          {bestMenus.map((menu, index) => (
-            <li className="menu-item" key={index}>
-              <i className={menu.icon}></i>
-              <span className="text">{menu.text}</span>
-            </li>
-          ))}
-        </ul>
-      </aside>
+    <div className="sidebar border-b border-r mr-2">
+      <ul className="menu-group">
+        {mainMenus.map((menu) => (
+          <li className="menu-item">
+            <i className={menu.icon}></i>
+            <span className="text">{menu.text}</span>
+          </li>
+        ))}
+      </ul>
+      <h4 className="menu-group-label">Library</h4>
+      <ul className="menu-group">
+        {libraryMenus.map((menu) => (
+          <li className="menu-item">
+            <i className={menu.icon}></i>
+            <span className="text">{menu.text}</span>
+          </li>
+        ))}
+      </ul>
+      <h4 className="menu-group-label">Best of Youtube</h4>
+      <ul className="menu-group">
+        {bestMenus.map((menu) => (
+          <li className="menu-item">
+            <i className={menu.icon}></i>
+            <span className="text">{menu.text}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
