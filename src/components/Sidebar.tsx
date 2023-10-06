@@ -1,50 +1,39 @@
+import { PiHouseThin } from "react-icons/pi";
+import { VscChevronUp } from "react-icons/vsc";
+import { BiJoystick } from "react-icons/bi";
+import { MdOutlineSportsBaseball } from "react-icons/md";
+import { PiTelevision } from "react-icons/pi";
+import { IoAnalyticsOutline } from "react-icons/io5";
+import { CiStar } from "react-icons/ci";
+import { BsArrowUpRightCircle } from "react-icons/bs";
+import { ImCoinEuro } from "react-icons/im";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import SidebarItem from "./SidebarItem";
+import SidebarItemList from "./SidebarItemList";
+import Divider from "./Divider";
+
 const Sidebar = () => {
-  const mainMenus = [
-    { text: "Página Inicial", icon: "fas fa-home" },
-    { text: "Popular", icon: "fas fa-chart-line" },
-  ];
-  const libraryMenus = [
-    { text: "History", icon: "fas fa-history" },
-    { text: "Watch later", icon: "fas fa-clock" },
-    { text: "Liked videos", icon: "fas fa-thumbs-up" },
-    { text: "Show more", icon: "fas fa-arrows-alt" },
-  ];
-  const bestMenus = [
-    { text: "Jogos", icon: "fas fa-music" },
-    { text: "Esportes", icon: "fas fa-basketball-ball" },
-    { text: "Negócios", icon: "fas fa-gamepad" },
-    { text: "Cripto", icon: "fas fa-film" },
-    { text: "Televisão", icon: "fas fa-tv" },
-    { text: "Celebridades", icon: "fas fa-newspaper" },
-  ];
   return (
-    <div className="sidebar border-b border-r mr-2">
-      <ul className="menu-group">
-        {mainMenus.map((menu) => (
-          <li className="menu-item">
-            <i className={menu.icon}></i>
-            <span className="text">{menu.text}</span>
-          </li>
-        ))}
+    <div className="flex flex-col gap-6 w-full  h-full px-6 ">
+      <ul>
+        <SidebarItem text="Página inicial" Icon={PiHouseThin} hasArrow />
+        <SidebarItem text="Popular" Icon={BsArrowUpRightCircle} hasArrow />
       </ul>
-      <h4 className="menu-group-label">Library</h4>
-      <ul className="menu-group">
-        {libraryMenus.map((menu) => (
-          <li className="menu-item">
-            <i className={menu.icon}></i>
-            <span className="text">{menu.text}</span>
-          </li>
-        ))}
-      </ul>
-      <h4 className="menu-group-label">Best of Youtube</h4>
-      <ul className="menu-group">
-        {bestMenus.map((menu) => (
-          <li className="menu-item">
-            <i className={menu.icon}></i>
-            <span className="text">{menu.text}</span>
-          </li>
-        ))}
-      </ul>
+      <Divider />
+      <SidebarItemList title="Recentes">
+        <SidebarItem text="r/pokemon" Icon={PiHouseThin} />
+        <SidebarItem text="r/pokemongo" Icon={PiHouseThin} />
+        <SidebarItem text="r/reddit/dev" Icon={PiHouseThin} />
+      </SidebarItemList>
+      <Divider />
+      <SidebarItemList title="Assuntos">
+        <SidebarItem text="Jogos" Icon={BiJoystick} hasArrow />
+        <SidebarItem text="Esportes" Icon={MdOutlineSportsBaseball} hasArrow />
+        <SidebarItem text="Negócios" Icon={IoAnalyticsOutline} hasArrow />
+        <SidebarItem text="Cripto" Icon={ImCoinEuro} hasArrow />
+        <SidebarItem text="Televisão" Icon={PiTelevision} hasArrow />
+        <SidebarItem text="Celebridades" Icon={CiStar} hasArrow />
+      </SidebarItemList>
     </div>
   );
 };

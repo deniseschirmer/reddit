@@ -5,19 +5,19 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="flex flex-row  items-center justify-around relative">
+    <section className="flex flex-row relative h-full w-full md:px-6 ">
       {/* Sidebar */}
-      <div className="w-1/5">
+      <div className="w-1/5 h-full hidden md:flex">
         <Sidebar />
       </div>
 
       {/* Main Content */}
-      <div className="w-3/5">
+      <div className="md:w-3/5 w-full">
         <Main />
       </div>
 
       {/* Info */}
-      <div className="w-1/5">
+      <div className="w-1/5 hidden md:flex">
         <Info />
       </div>
 
