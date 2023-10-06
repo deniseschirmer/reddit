@@ -13,7 +13,7 @@
 
 O projeto feito para fim de teste para uma vaga, o objetivo era fazer um clone do layout com requisição do Reddit.
 
-### Link do projeto: https://clone-reddiit.netlify.app/
+### Link do projeto: https://reddit-three-mu.vercel.app/
 
 ### 🛠 Tecnologias
 
